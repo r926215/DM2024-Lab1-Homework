@@ -6,12 +6,20 @@ Author: Elvis Saravia
 Email: ellfae@gmail.com
 """
 
-def format_rows(comments):
+def format_rows_for_hw(comments):
     """ format the text field and strip special characters """
     D = []
     for d in comments:
         temp_d = " ".join(d.split("\n")).strip('\n\t')
         D.append(temp_d)
+    return D
+
+def format_rows(docs):
+    """ format the text field and strip special characters """
+    D = []
+    for d in docs.data:
+        temp_d = " ".join(d.split("\n")).strip('\n\t')
+        D.append([temp_d])
     return D
 
 def format_labels(target, docs):
